@@ -1,0 +1,62 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()" style="padding: 2%">
+  <div class="col-sm-10">
+    <input type="text" class="form-control"  formControlName="title" placeholder="Title">
+    <br>
+    <input type="text" class="form-control"  formControlName="description" placeholder="Description">
+    <br>
+    <!--Question one-->
+    <h5>Question 1</h5>
+    <input type="text" class="form-control"  formControlName="Question1">
+    <div class="custom-control custom-radio">
+      <input type="radio" id="customRadio1" formControlName="customRadio" [value]="true" class="custom-control-input">
+      <label class="custom-control-label"  for="customRadio1">True</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="customRadio2"  formControlName="customRadio"  [value]="false" class="custom-control-input">
+      <label class="custom-control-label"  for="customRadio2">False</label>
+    </div>
+    <br>
+    <!--Question Two-->
+    <h5>Question 2</h5>
+      <input type="text" class="form-control" formControlName="Question2" >
+    <br>
+      <input type="text" class="form-control"  formControlName="Q2option1" placeholder="Correct Answer" style="background-color: azure">
+    <br>
+      <input type="text" class="form-control"  formControlName="Q2option2" placeholder="InCorrect Answer">
+    <br>
+      <input type="text" class="form-control"  formControlName="Q2option3" placeholder="InCorrect Answer">
+    <br>
+      <input type="text" class="form-control"  formControlName="Q2option4" placeholder="InCorrect Answer">
+    <br>
+    <!--Question Three-->
+    <h5>Question 3</h5>
+      <input type="text" class="form-control" formControlName="Question3">
+    <br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox"  [value]="false"  formControlName="Q3optionA"   >
+      <input type="text" class="col-sm-3"  formControlName="Q3option1">
+    </div>
+    <br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox"  [value]="false"  formControlName="Q3optionB" >
+      <input type="text" class="col-sm-3"  formControlName="Q3option2">
+    </div>
+    <br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [value]="false" formControlName="Q3optionC" >
+      <input type="text" class="col-sm-3"  formControlName="Q3option3">
+    </div>
+    <br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [value]="false"  formControlName="Q3optionD" >
+      <input type="text" class="col-sm-3"  formControlName="Q3option4">
+    </div>
+    <br>
+    <!--Question Four-->
+    <h5>Question 4</h5>
+      <input type="text" class="form-control"  formControlName="Question4">
+  </div>
+    <br>
+  <hr>
+      <button type="submit" class="btn btn-secondary btn-lg" style="float: right;margin-bottom: 3%" [disabled]="!form.valid">Submit</button>
+</form>

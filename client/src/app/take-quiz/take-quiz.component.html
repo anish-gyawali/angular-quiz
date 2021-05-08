@@ -1,0 +1,65 @@
+<h4 style="padding-left: 2.5%">Select Quiz to Start</h4>
+<hr>
+<div class="col" *ngFor="let val of data" style="background-color: whitesmoke;">
+  <div class="col-sm-11">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Title: {{val.title}}</h5>
+        <p class="card-text">Description: {{val.description}}</p>
+          <p>
+            <button type="button" class="btn btn-outline-secondary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+                    aria-controls="collapseExample">
+              Start
+            </button>
+          </p>
+        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" style="background-color: whitesmoke">
+          <p class = "card-text">1.  {{val.Question1}}</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            True
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            False
+          </label>
+        </div>
+        <p class = "card-text">2.  {{val.Question2}}</p>
+        <select class="selective" >
+          <option>{{val.Q2option1}}</option>
+          <option>{{val.Q2option2}}</option>
+          <option>{{val.Q2option3}}</option>
+          <option>{{val.Q2option4}}</option>
+        </select>
+        <p class = "card-text">3.  {{val.Question3}}</p>
+        <div class="list-group">
+          <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            {{val.Q3option1}}
+          </label>
+          <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            {{val.Q3option2}}
+          </label>
+          <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            {{val.Q3option3}}
+          </label>
+          <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            {{val.Q3option4}}
+          </label>
+        </div>
+        <p class = "card-text">4.  {{val.Question4}}</p>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="write short answer here.." id="floatingTextarea2" style="height: 100px; width: 50%"></textarea>
+        </div>
+          <button type="submit" class="btn btn-secondary btn-lg" style="float: right;margin-bottom: 3%">Submit</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

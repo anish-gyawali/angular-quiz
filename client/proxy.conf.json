@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "https://node-quiz1.herokuapp.com",
+    "pathRewrite": {
+      "^/api/": ""
+    }
+  }
+
+}
