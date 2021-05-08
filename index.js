@@ -6,7 +6,6 @@ const mongoDB = require("mongodb");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 
-//const MONGODB_URL="mongodb+srv://awanis:Awanis-2021@cluster0.iom1t.mongodb.net/quizDatabase?retryWrites=true&w=majority";
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
